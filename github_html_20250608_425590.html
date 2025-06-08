@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Universo Criativo de Davi</title>
+    <style>
+        :root {
+            --color-primary: #FF6B6B;
+            --color-secondary: #4ECDC4;
+            --color-accent: #FFE66D;
+            --color-dark: #292F36;
+            --color-light: #F7FFF7;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--color-light);
+            color: var(--color-dark);
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+            padding: 3rem 0;
+            color: white;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .profile-icon {
+            width: 150px;
+            height: 150px;
+            background: var(--color-accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            font-size: 4rem;
+            color: var(--color-dark);
+            font-weight: bold;
+        }
+        
+        .badge-custom {
+            background-color: var(--color-accent);
+            color: var(--color-dark);
+            margin: 0.3rem;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+        
+        .card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-bottom: 2rem;
+            background-color: white;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .card-header {
+            height: 150px;
+            background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        
+        footer {
+            background-color: var(--color-dark);
+            color: white;
+            padding: 3rem 0;
+            border-radius: 20px 20px 0 0;
+        }
+        
+        .btn-custom {
+            background-color: var(--color-primary);
+            color: white;
+            border: none;
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .btn-custom:hover {
+            background-color: var(--color-secondary);
+            transform: scale(1.05);
+        }
+        
+        .social-icon {
+            color: var(--color-accent);
+            font-size: 1.5rem;
+            margin: 0 0.5rem;
+            transition: all 0.3s;
+        }
+        
+        .social-icon:hover {
+            color: white;
+            transform: scale(1.2);
+        }
+        
+        h1, h2, h3 {
+            font-weight: bold;
+        }
+        
+        .modal-content {
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        
+        .modal-header {
+            background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="container-fluid text-center">
+        <div class="profile-icon">DR</div>
+        <p class="lead mt-3">@eopq._</p>
+        <h1 class="display-4">Explorador de Ideias Digitais</h1>
+        <p class="w-75 mx-auto">Sou estudante do 2° ano no Joaquim Pedroso de Alvarenga, apaixonado por tecnologia, design e criação de conteúdos inovadores. Este espaço é onde compartilho meus projetos e experimentos criativos.</p>
+        <p class="mt-4">Minhas áreas de interesse</p>
+        <div>
+            <span class="badge-custom">Design Digital</span>
+            <span class="badge-custom">Edição de Vídeo</span>
+            <span class="badge-custom">Fotografia</span>
+            <span class="badge-custom">Programação</span>
+            <span class="badge-custom">Marketing Digital</span>
+        </div>
+    </header>
+    
+    <main class="container mt-5">
+        <h2 class="text-center mb-5">Meus Projetos Criativos</h2>
+        <div class="row">
+            <!-- Projeto 1 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        #PixelArt
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Galeria de Arte Digital</h5>
+                        <p class="card-text">Coleção de ilustrações digitais criadas usando técnicas de pixel art e design vetorial. Explore diferentes estilos e paletas de cores vibrantes.</p>
+                        <button type="button" class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#modal1">Detalhes</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Projeto 2 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        #Motion
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Animação e Efeitos Visuais</h5>
+                        <p class="card-text">Projetos de motion graphics e pequenas animações criadas para redes sociais, explorando narrativas visuais e técnicas de edição.</p>
+                        <button type="button" class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#modal2">Detalhes</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projeto 3 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        #Code
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Experimentos com JavaScript</h5>
+                        <p class="card-text">Pequenos projetos de programação que exploram interatividade, desde jogos simples até visualizações de dados criativas.</p>
+                        <button type="button" class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#modal3">Detalhes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal 1 -->
+    <div class="modal fade" id="modal1" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Galeria de Arte Digital</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Este projeto reúne uma série de ilustrações digitais criadas ao longo de 2024, explorando diferentes técnicas e estilos visuais. Cada peça foi desenvolvida com atenção às tendências atuais de design, utilizando paletas de cores vibrantes e contrastantes.</p>
+                    <p>As obras foram criadas usando uma combinação de ferramentas digitais, incluindo Adobe Illustrator para os trabalhos vetoriais e Aseprite para as pixel arts. O projeto também inclui experimentos com texturas e padrões geométricos, buscando criar composições visualmente impactantes.</p>
+                    <p>Além do aspecto técnico, cada ilustração carrega um conceito ou mensagem pessoal, muitas vezes relacionada a temas como identidade juvenil, tecnologia e conexões humanas na era digital.</p>
+                    <div class="text-center my-4 p-3" style="background-color: var(--color-accent); border-radius: 10px;">
+                        <p class="mb-0">"A arte digital é minha forma de traduzir ideias abstratas em algo tangível e compartilhável."</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-custom">Ver Projeto</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div class="modal fade" id="modal2" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Animação e Efeitos Visuais</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Coleção de projetos de animação desenvolvidos para plataformas de redes sociais, com foco em conteúdo para Instagram e TikTok. Cada animação foi planejada para contar uma micro-história em poucos segundos, desafio que exigiu síntese criativa e domínio técnico.</p>
+                    <p>As técnicas utilizadas incluem keyframe animation, morphing, motion tracking e composição de efeitos visuais. Os softwares principais foram Adobe After Effects para as animações mais complexas e CapCut para edições rápidas e adaptáveis às tendências das plataformas.</p>
+                    <p>Este projeto também inclui uma série de templates criativos que podem ser personalizados para diferentes necessidades, demonstrando minha capacidade de criar soluções visuais versáteis.</p>
+                    <div class="text-center my-4 p-3" style="background-color: var(--color-secondary); color: white; border-radius: 10px;">
+                        <p class="mb-0">"No mundo das redes sociais, cada frame conta - e eu me dedico a fazer cada um deles valer a pena."</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-custom">Ver Projeto</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div class="modal fade" id="modal3" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Experimentos com JavaScript</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Série de pequenos projetos de programação que exploram o potencial criativo do JavaScript. Desde jogos simples baseados em navegador até visualizações de dados interativas, cada experimento foi uma oportunidade de aprender novas técnicas enquanto produzia algo visualmente interessante.</p>
+                    <p>Destaques incluem um gerador de arte procedural que cria composições abstratas únicas a cada execução, um simulador de partículas que reage à interação do usuário e uma ferramenta de colorização de paletas que ajuda designers a encontrar combinações harmoniosas.</p>
+                    <p>Estes projetos foram desenvolvidos principalmente com JavaScript vanilla, com alguns experimentos utilizando bibliotecas como p5.js para gráficos e Three.js para elementos 3D. O foco sempre foi manter o código limpo e documentado, mesmo em projetos pequenos.</p>
+                    <div class="text-center my-4 p-3" style="background-color: var(--color-primary); color: white; border-radius: 10px;">
+                        <p class="mb-0">"Programação é outra forma de arte - onde a lógica encontra a criatividade para criar experiências únicas."</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-custom">Ver Projeto</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="container-fluid text-center py-5">
+        <h2 class="mb-4">Vamos criar algo juntos?</h2>
+        <div class="mb-4">
+            <a href="https://www.instagram.com/eopq._" class="social-icon" target="_blank">📷</a>
+            <a href="#" class="social-icon">✉️</a>
+            <a href="#" class="social-icon">🎥</a>
+            <a href="#" class="social-icon">💻</a>
+        </div>
+        <p class="my-5">© 2025 Davi Reis Oliveira - Estudante do Joaquim Pedroso de Alvarenga</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
